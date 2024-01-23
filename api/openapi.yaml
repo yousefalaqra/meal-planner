@@ -1,0 +1,174 @@
+openapi: 3.0.0
+info:
+  title: Meal Plan Generator API
+  version: 1.0.0
+servers:
+  - url: https://api.example.com
+
+paths:
+  /generate_meal_plan:
+    post:
+      summary: Generate a Weekly Meal Plan
+      description: |
+        This endpoint allows nutritionists to generate a personalized weekly meal plan.
+      requestBody:
+        required: true
+        content:
+          application/json:
+            schema:
+              $ref: '#/components/schemas/MealPlanRequest'
+      responses:
+        '200':
+          description: Successful operation
+          content:
+            application/json:
+              schema:
+                $ref: '#/components/schemas/MealPlanResponse'
+
+components:
+  schemas:
+    MealPlanRequest:
+      type: object
+      properties:
+        clientProfile:
+          $ref: '#/components/schemas/ClientProfile'
+        caloricGoal:
+          type: integer
+          minimum: 1800
+          maximum: 2000
+        macronutrientRatios:
+          type: object
+          properties:
+            carbohydrates:
+              type: number
+              minimum: 0
+              maximum: 100
+            protein:
+              type: number
+              minimum: 0
+              maximum: 100
+            fat:
+              type: number
+              minimum: 0
+              maximum: 100
+        mealFrequency:
+          type: object
+          properties:
+            mealsPerDay:
+              type: integer
+              minimum: 1
+            snacksPerDay:
+              type: integer
+              minimum: 0
+        foodPreferences:
+          type: object
+          properties:
+            preferredProteinSources:
+              type: array
+              items:
+                type: string
+            foodsToAvoid:
+              type: array
+              items:
+                type: string
+
+    ClientProfile:
+      type: object
+      properties:
+        name:
+          type: string
+        age:
+          type: integer
+        gender:
+          type: string
+          enum: ['Male', 'Female', 'Other']
+        weight:
+          type: number
+        height:
+          type: number
+        activityLevel:
+          type: string
+          enum: ['Sedentary', 'Lightly Active', 'Moderately Active', 'Very Active']
+        dietaryPreferences:
+          type: string
+        allergiesRestrictions:
+          type: array
+          items:
+            type: string
+
+    MealPlanResponse:
+      type: object
+      properties:
+        generatedMealPlan:
+          type: object
+          properties:
+            weekStartDate:
+              type: string
+              format: date
+              description: The start date of the generated week
+            days:
+              type: array
+              items:
+                $ref: '#/components/schemas/DailyMealPlan'
+        nutritionAnalysis:
+          $ref: '#/components/schemas/NutritionAnalysis'
+
+    DailyMealPlan:
+      type: object
+      properties:
+        dayOfWeek:
+          type: string
+          description: The day of the week
+        meals:
+          type: array
+          items:
+            $ref: '#/components/schemas/Meal'
+
+    Meal:
+      type: object
+      properties:
+        name:
+          type: string
+        items:
+          type: array
+          items:
+            $ref: '#/components/schemas/FoodItem'
+
+    FoodItem:
+      type: object
+      properties:
+        name:
+          type: string
+        quantity:
+          type: string
+          description: The serving size or quantity of the food item
+        nutritionInformation:
+          $ref: '#/components/schemas/NutritionInformation'
+
+    NutritionInformation:
+      type: object
+      properties:
+        calories:
+          type: number
+        protein:
+          type: number
+        carbohydrates:
+          type: number
+        fat:
+          type: number
+
+    NutritionAnalysis:
+      type: object
+      properties:
+        totalCalories:
+          type: number
+          description: Total calories for the week
+        totalProtein:
+          type: number
+          description: Total protein for the week
+        totalCarbohydrates:
+          type: number
+          description: Total carbohydrates for the week
+        totalFat:
+          type: number
+          description: Total fat for the week
