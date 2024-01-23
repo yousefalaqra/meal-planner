@@ -1,0 +1,12 @@
+# MealPlanRequest
+
+
+## Fields
+
+| Field                                                                            | Type                                                                             | Required                                                                         | Description                                                                      |
+| -------------------------------------------------------------------------------- | -------------------------------------------------------------------------------- | -------------------------------------------------------------------------------- | -------------------------------------------------------------------------------- |
+| `clientProfile`                                                                  | [components.ClientProfile](../../models/components/clientprofile.md)             | :heavy_minus_sign:                                                               | N/A                                                                              |
+| `caloricGoal`                                                                    | *number*                                                                         | :heavy_minus_sign:                                                               | N/A                                                                              |
+| `macronutrientRatios`                                                            | [components.MacronutrientRatios](../../models/components/macronutrientratios.md) | :heavy_minus_sign:                                                               | N/A                                                                              |
+| `mealFrequency`                                                                  | [components.MealFrequency](../../models/components/mealfrequency.md)             | :heavy_minus_sign:                                                               | N/A                                                                              |
+| `foodPreferences`                                                                | [components.FoodPreferences](../../models/components/foodpreferences.md)         | :heavy_minus_sign:                                                               | N/A                                                                              |

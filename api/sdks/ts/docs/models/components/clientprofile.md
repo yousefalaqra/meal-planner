@@ -1,0 +1,15 @@
+# ClientProfile
+
+
+## Fields
+
+| Field                                                                | Type                                                                 | Required                                                             | Description                                                          |
+| -------------------------------------------------------------------- | -------------------------------------------------------------------- | -------------------------------------------------------------------- | -------------------------------------------------------------------- |
+| `name`                                                               | *string*                                                             | :heavy_minus_sign:                                                   | N/A                                                                  |
+| `age`                                                                | *number*                                                             | :heavy_minus_sign:                                                   | N/A                                                                  |
+| `gender`                                                             | [components.Gender](../../models/components/gender.md)               | :heavy_minus_sign:                                                   | N/A                                                                  |
+| `weight`                                                             | *number*                                                             | :heavy_minus_sign:                                                   | N/A                                                                  |
+| `height`                                                             | *number*                                                             | :heavy_minus_sign:                                                   | N/A                                                                  |
+| `activityLevel`                                                      | [components.ActivityLevel](../../models/components/activitylevel.md) | :heavy_minus_sign:                                                   | N/A                                                                  |
+| `dietaryPreferences`                                                 | *string*                                                             | :heavy_minus_sign:                                                   | N/A                                                                  |
+| `allergiesRestrictions`                                              | *string*[]                                                           | :heavy_minus_sign:                                                   | N/A                                                                  |

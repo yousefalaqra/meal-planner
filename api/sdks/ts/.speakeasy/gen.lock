@@ -1,0 +1,69 @@
+lockVersion: 2.0.0
+id: 7e989626-a485-4a72-8116-97afed543398
+management:
+  docChecksum: 6e2d4941965ef48004b69034cc86aa3e
+  docVersion: 1.0.0
+  speakeasyVersion: internal
+  generationVersion: 2.237.3
+  releaseVersion: 0.0.1
+  configChecksum: 24248c6522d1eaad2a69d9fc3401a944
+features:
+  typescript:
+    core: 3.4.7
+    globalServerURLs: 2.82.1
+generatedFiles:
+  - src/sdk/sdk.ts
+  - .eslintrc.js
+  - .npmignore
+  - RUNTIMES.md
+  - package-lock.json
+  - package.json
+  - src/index.ts
+  - src/lib/base64.ts
+  - src/lib/config.ts
+  - src/lib/encodings.ts
+  - src/lib/event-streams.ts
+  - src/lib/http.ts
+  - src/lib/retries.ts
+  - src/lib/sdks.ts
+  - src/lib/security.ts
+  - src/lib/url.ts
+  - src/sdk/index.ts
+  - src/models/errors/sdkerror.ts
+  - src/types/blobs.ts
+  - src/types/decimal.ts
+  - src/types/index.ts
+  - src/types/operations.ts
+  - src/types/rfcdate.ts
+  - tsconfig.json
+  - src/models/operations/postgeneratemealplan.ts
+  - src/models/components/mealplanresponse.ts
+  - src/models/components/nutritionanalysis.ts
+  - src/models/components/dailymealplan.ts
+  - src/models/components/meal.ts
+  - src/models/components/fooditem.ts
+  - src/models/components/nutritioninformation.ts
+  - src/models/components/mealplanrequest.ts
+  - src/models/components/clientprofile.ts
+  - src/models/errors/index.ts
+  - src/models/operations/index.ts
+  - src/models/components/index.ts
+  - docs/models/operations/postgeneratemealplanresponse.md
+  - docs/types/rfcdate.md
+  - docs/models/components/generatedmealplan.md
+  - docs/models/components/mealplanresponse.md
+  - docs/models/components/nutritionanalysis.md
+  - docs/models/components/dailymealplan.md
+  - docs/models/components/meal.md
+  - docs/models/components/fooditem.md
+  - docs/models/components/nutritioninformation.md
+  - docs/models/components/macronutrientratios.md
+  - docs/models/components/mealfrequency.md
+  - docs/models/components/foodpreferences.md
+  - docs/models/components/mealplanrequest.md
+  - docs/models/components/gender.md
+  - docs/models/components/activitylevel.md
+  - docs/models/components/clientprofile.md
+  - docs/sdks/sdk/README.md
+  - USAGE.md
+  - .gitattributes
